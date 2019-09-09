@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2019. Patricio Araya - All Rights Reserved
+ * See LICENSE.md for full license details.
+ */
+
+plugins {
+    id 'java'
+}
+
+group 'cl.dsm.ucn'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // Logger
+    implementation 'org.slf4j:slf4j-api:1.8.0-beta1'
+    implementation 'ch.qos.logback:logback-classic:1.3.0-alpha4'
+
+    // Commons IO
+    implementation 'commons-io:commons-io:2.6'
+
+}

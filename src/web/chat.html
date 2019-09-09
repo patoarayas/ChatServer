@@ -1,0 +1,44 @@
+<!--
+  ~ Copyright (c) 2019. Patricio Araya - All Rights Reserved
+  ~ See LICENSE.md for full license details.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <style>
+        body{
+            background: azure;
+            padding: 1em;
+        }
+
+        .container{
+            margin: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div><h4>DSM Chat Server v0.0.1</h4></div>
+<div class="container">
+<div class="col-lg-6 col-lg-offset-3">
+    <div id="chat-window" class="card card-body ">
+
+    </div>
+    <div id="chat-input" class="form-group card-header ">
+        <form action="/" method="post">
+            <input type="text" name="username" class="form-control-sm" placeholder="Username">
+            <input type="text" name="message" class="form-control-sm" placeHolder="Type here your message">
+            <input type="submit" value="Enviar" class="form-control-sm btn btn-primary">
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
