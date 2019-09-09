@@ -2,6 +2,6 @@
 /.gradle/
 /build/
 /build/classes/java/main/
-/.idea/
 Sera borrado src/main/resources/
 Sera borrado src/test/
+/.idea/
