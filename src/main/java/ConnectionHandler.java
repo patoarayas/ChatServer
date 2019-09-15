@@ -93,6 +93,10 @@ public class ConnectionHandler implements Runnable {
 
                 ChatServer.addMessage(chatMessage);
 
+                log.info("At {} user {} said {} from {}.",
+                        chatMessage.getTimeStamp(), chatMessage.getUsername(),
+                        chatMessage.getMessage(), socket.getInetAddress());
+
             }
 
 
@@ -140,8 +144,6 @@ public class ConnectionHandler implements Runnable {
 
             String line = bf.readLine();
 
-
-            //boolean isPost = input.get(0).contains("POST");
             if (line.length() == 0) {
                 // EOF
 

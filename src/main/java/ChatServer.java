@@ -22,13 +22,13 @@ public class ChatServer {
      */
     private static final Logger log = LoggerFactory.getLogger(ChatServer.class);
     private static final int PORT = 9000;
-    public static List<ChatMessage> messages = new LinkedList<ChatMessage>();
+    private static final List<ChatMessage> messages = new LinkedList<ChatMessage>();
 
 
     /**
      * Initialize chat server
      *
-     * @throws IOException
+     * @throws : IOException
      */
     public static void main(String[] args) throws IOException {
 
@@ -62,9 +62,10 @@ public class ChatServer {
 
     /**
      * Generate an HTML with the messages embedded.
+     *
      * @return : A String containing the HTML
      */
-    public static String generateHtml() {
+    static String generateHtml() {
 
         StringBuilder sb = new StringBuilder();
         File fl = new File("./src/web/chat.html");
@@ -89,21 +90,26 @@ public class ChatServer {
 
         } catch (FileNotFoundException e) {
             log.error("Unable to retrieve html file");
+
         }
 
-        log.debug(sb.toString());
         return sb.toString();
     }
 
     /**
      * Add a new message to the list
+     *
      * @param msg : The message to be added.
      */
-    public static void addMessage(ChatMessage msg){
+    static void addMessage(ChatMessage msg) {
 
-        synchronized (messages){
+        synchronized (messages) {
             messages.add(msg);
         }
+    }
+
+    public static List<ChatMessage> getMessages(){
+        return messages;
     }
 }
 
