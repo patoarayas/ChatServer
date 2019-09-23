@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
- *  This class represents a message on the chat.
+ * This class represents a message on the chat.
  */
 public class ChatMessage {
 
@@ -16,7 +16,7 @@ public class ChatMessage {
     private String username;
     private String message;
 
-    public ChatMessage(String username, String message){
+    public ChatMessage(String username, String message) {
 
         this.timeStamp = new Date();
         this.username = username;
@@ -25,6 +25,7 @@ public class ChatMessage {
 
     /**
      * Returns a  formated representation of the ChatMesagge data.
+     *
      * @return : "[username]: [message]"
      */
     @Override

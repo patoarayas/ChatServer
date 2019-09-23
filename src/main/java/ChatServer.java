@@ -108,7 +108,7 @@ public class ChatServer {
         }
     }
 
-    public static List<ChatMessage> getMessages(){
+    public static List<ChatMessage> getMessages() {
         return messages;
     }
 }
